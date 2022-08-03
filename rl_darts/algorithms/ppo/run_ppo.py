@@ -279,7 +279,7 @@ def train_eval(root_dir: str):
 def main(_):
   logging.set_verbosity(logging.INFO)
   tf.compat.v1.enable_v2_behavior()
-  tf.gfile.MakeDirs(FLAGS.work_dir)
+  tf.io.gfile.makedirs(FLAGS.work_dir)
 
   train_eval(root_dir=FLAGS.work_dir)
 
